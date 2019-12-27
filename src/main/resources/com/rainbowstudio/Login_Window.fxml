@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="320.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login_Window_Controller">
+   <children>
+      <ImageView fx:id="image_View" fitHeight="110.0" fitWidth="350.0" layoutX="30.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="14.0" />
+      <TextField layoutX="125.0" layoutY="150.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField layoutX="125.0" layoutY="185.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Button layoutX="198.0" layoutY="263.0" mnemonicParsing="false" text="Button">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <CheckBox layoutX="125.0" layoutY="220.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="86.0" text="自动登录">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="240.0" layoutY="220.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="75.0" text="记住密码">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <Label layoutX="67.0" layoutY="154.0" text="用户名:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="187.0" text="密码:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

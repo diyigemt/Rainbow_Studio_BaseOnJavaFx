@@ -10,23 +10,25 @@ import java.io.IOException;
 
 public class App extends Application {
 	private static Scene scene;
+	private static Stage stage;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		scene = new Scene(loadFXML("Main_Window"),Constants.DEFAULT_WINDOW_WIDTH,Constants.DEFAULT_WINDOW_HEIGHT);
+		scene = new Scene(loadFXML("Login_Window"),Constants.DEFAULT_WINDOW_WIDTH,Constants.DEFAULT_WINDOW_HEIGHT);
 		//scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
-		primaryStage.setMinWidth(Constants.DEFAULT_WINDOW_WIDTH);
-		primaryStage.setMinHeight(Constants.DEFAULT_WINDOW_HEIGHT);
-		primaryStage.setScene(scene);
-		primaryStage.setResizable(false);
-		primaryStage.setTitle("Rainbow Studio Student Management System");
-		primaryStage.show();
+		stage = primaryStage;
+		setWindowSize(Constants.LOGIN_WINDOW_WIDTH, Constants.LOGIN_WINDOW_HEIGHT);
+		stage.setScene(scene);
+		stage.setResizable(false);
+		//stage.setTitle("Rainbow Studio Student Management System");
+		stage.setTitle("Login");
+		stage.show();
 	}
 
 	public static void main(String[] args) {
 		launch();
 	}
 
-	static void setRoot(String fxml) throws IOException {
+	public static void setRoot(String fxml) throws IOException {
 		scene.setRoot(loadFXML(fxml));
 	}
 
@@ -38,5 +40,18 @@ public class App extends Application {
 		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
 		fxmlLoader.setController(controller);
 		return fxmlLoader.load();
+	}
+	public static void setWindowSize(int new_Width, int new_Height) {
+		stage.setWidth(new_Width);
+		stage.setHeight(new_Height);
+	}
+	public static void setWindowWidth(int new_Width) {
+		stage.setWidth(new_Width);
+	}
+	public static void setWindowHeight(int new_Height) {
+		stage.setHeight(new_Height);
+	}
+	public static void setTitle(String new_Title) {
+		stage.setTitle(new_Title);
 	}
 }
